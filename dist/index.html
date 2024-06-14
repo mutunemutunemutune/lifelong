@@ -1,0 +1,595 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4 w-80.2.0/fonts/remixicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="scr/swiper-bundle.min.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900  dark:text-gray-400 text-gray-900 box-content p-0 m-0 scroll-smooth">
+   <!-- nav -->
+   <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden"></div>
+  <header class="z-50 w-full shadow-md sticky top-0">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-8">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="imgs/logo.png" class="md:h-[84px] h-24" alt="Logo" />
+        </a>
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <label for="menu-toggle" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </label>
+        <div class="w-11/12 hidden md:flex md:w-auto md:items-center md:justify-between peer-checked:flex peer-checked:absolute peer-checked:bg-white dark:peer-checked:bg-slate-900 peer-checked:right-0 peer-checked:top-0 z-50" id="navbar-default">
+          <div class="flex flex-col md:flex-row w-full ">
+            <img class="h-20 w-20 mt-4 ml-10" src="imgs/logo.png" alt="">
+            <label for="menu-toggle" class="ease-in-out md:hidden absolute top-12 right-8 transform -translate-y-1/2 p-2 w-10 h-10 flex items-center justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+              <span class="sr-only">Close main menu</span>
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </label>
+            <ul class="font-semibold flex flex-col p-8 md:p-0 mt-0 md:mt-0 border-gray-100  bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:border-0 md:bg-white dark:bg-gray-900 md:dark:bg-gray-900 dark:border-gray-700 w-full md:w-auto">
+              <li>
+                <a href="#" class="block py-2 px-3 text-white bg-yellow-500 rounded md:bg-transparent md:text-yellow-500 md:p-0 dark:text-white md:dark:text-yellow-500" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+              </li>
+              <li>
+                <a href="about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Business solutions</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Subsidiaries</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Focus Area</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+  
+  
+  
+ 
+ <!--hero-->
+ <section class="relative">
+  <div class="md:h-[580px] relative flex items-center justify-center text-center ">
+    <video autoplay muted loop class="w-full h-80 md:h-full object-cover ">
+      <source src="https://lifelong.co.ke/assets/videos/lifelong-intro.mp4" type="video/mp4">
+    </video>
+    <h2 class="font-bold z-20 absolute text-white text-4xl md:text-4xl transform -translate-x-1/2 -translate-y-[65%] top-1/2 left-1/2 p-4 ">
+      Your Home For Suitable Transformation
+    </h2>
+  </div>
+</section>
+
+
+
+ <!--about-->
+
+ <section id="services" class="relative   md:px-36 grid grid-cols-1 bg-white w-full  dark:bg-gray-900 md:-mt-20">
+  <div class="border-black md:rounded-lg bg-white dark:bg-gray-800 md:px-8 w-auto md:pt-10 md:transform md:-translate-y-24 md:py-8 shadow-lg dark:text-white">
+    <p class="text-center md:text-xl text-sm font-semibold  mt-6 md:mb-4 dark:text-yellow-500">Our Focus Area</p>
+    <div class="self-center grid md:grid-cols-4 gap-2 items-center justify-items-center px-4 py-4">
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full ">
+          <a href="#" class="inline-block text-xs ">
+              Technology &amp; Innovations Ecosystem 
+              <span class="absolute inset-0"></span>
+          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+          </svg>
+      </div>
+      <div class="group relative mx-auto  hover:bg-amber-200  dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+          <a href="#" class="inline-block text-xs md:text-xs">
+              Agri-business Sector 
+              <span class="absolute inset-0"></span>
+          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+          </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+             Digital Media & Education Eco-system
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+          Real Estate Sector
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+          Digital & Ai- Powered  Marketing 
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+            Digital Governance Ecosystem
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+            Philanthropy $ Social Work
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      <div class="group relative mx-auto hover:bg-amber-200 dark:hover:text-black flex justify-between items-center rounded-lg p-6 border-b shadow self-center shadow-amber-400/90 w-full">
+        <a href="#" class="inline-block text-xs md:text-xs">
+            international Trade
+            <span class="absolute inset-0"></span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block text-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="us" class="md:px-44 px-4 mt-8 bg-white md:transform md:-translate-y-24 dark:bg-gray-900 pb-4">
+  <p class="font-semibold text-3xl dark:text-gray-50 md:text-start text-center md:mb-10 mb-8">
+    Who We Are
+  </p>
+  <div class="flex flex-col md:flex-row gap-4  ">
+    <div class="rounded-xl bg-white shadow-lg dark:bg-gray-800 md:w-1/2">
+      <div class="overflow-hidden rounded-t-xl">
+        <img class="w-full object-cover rounded-lg md:h-80" src="imgs/tech-companies.jpg" alt="">
+      </div>
+      <div class="p-6">
+        <h5 class="text-2xl font-bold dark:text-gray-100 mb-2">
+          What We Do
+        </h5>
+        <p class="text-base  dark:text-gray-400 mt-1 ">
+          We seek to create and innovate technological solutions for lifelong transformation and sustainable socio-economic growth. We achieve our brand promise through the commitment of our wholly owned subsidiaries.
+        </p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-yellow-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-6">
+          Learn More
+          <svg class="w-3 h-3 ml-2 -mr-1 rtl:rotate-180 animate-ping" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 md:w-1/3 ">
+      <a href="#">
+        <img class="rounded-lg w-full object-cover md:h-80" src="imgs/tech-trends.jpg" alt="">
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Our Story</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          In 2016, we began the Lifelong Story by investing in structures and frameworks that would shape our today’s trajectory.
+        </p>
+        <a href="#" class=" mt-10 inline-flex items-center px-3 py-2 text-sm font-medium text-yellow-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Learn More
+          <svg class="w-3 h-3 ml-2 -mr-1 rtl:rotate-180 animate-ping" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col md:block bg-white border border-gray-200 rounded-lg shadow dark:border-gray-700 dark:bg-gray-800 md:w-1/3">
+      <img class="object-cover w-full rounded-lg md:h-80" src="imgs/tech-news.webp" alt="">
+      <div class="p-4 flex flex-col justify-between leading-normal">
+        <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Who We Are</h5>
+        <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+          Lifelong Group of Companies Limited is an innovation & technology-driven corporation established to create and innovate solutions for sustainable socio-economic developments.
+        </p>
+        <a href="#" class="mb-3 inline-flex items-center px-3 py-2 text-sm font-medium text-yellow-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Learn More
+          <svg class="w-3 h-3 ml-2 -mr-1 rtl:rotate-180 animate-ping" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</section>
+
+
+
+  <div class="flex md:transform md:-translate-y-20 md:px-36  text-xs ">
+    <div class="grid grid-cols-1 md:grid-cols-3  gap-4  py-8 px-4 text-sm ">
+
+        <div id="id1" class="bg-slate-800 transition-all ease-in-out delay-150 motion-reduce:transition-none motion-reduce:hover:transform-none  rounded-md  shadow-sm  md:shadow-2xl  shadow-gold-500/40 md:shadow-gray-900  hover:rounded-xl hover:shadow-xl px-8 py-4">
+            <h2 class="text-xl font-bold text-center  text-yellow-500 ">Vision</h2>
+            <p class="mt-2 text-left tracking-normalleading-tight whitespace-normal text-gray-300">
+                Sustainable &amp; prosperous lives.
+            </p>
+        </div>
+
+
+        <div id="id2" class="bg-slate-800 transition-all ease-in-out delay-150 motion-reduce:transition-none motion-reduce:hover:transform-none rounded-md  shadow-sm  md:shadow-2xl  shadow-gold-500/40 md:shadow-gray-900  hover:rounded-xl hover:shadow-xl px-8 py-4">
+            <h2 class="text-xl font-bold text-center text-yellow-500">Mission</h2>
+            <p class="mt-2 text-left  whitespace-normal tracking-normal prose-sm text-gray-300">
+                To be a home for creative, innovative &amp; transformative
+                innovations that drives sustainable social-economic
+                development
+            </p>
+        </div>
+
+
+
+        <div id="id3" class="bg-slate-800 transition-all ease-in-out delay-150 motion-reduce:transition-none motion-reduce:hover:transform-none rounded-md  shadow-sm  md:shadow-2xl  shadow-gold-500/40 md:shadow-gray-900  hover:rounded-xl hover:shadow-xl px-8 py-4 ">
+            <h2 class="text-xl font-bold text-center text-yellow-500 ">Strategic Objective</h2>
+            <p class="mt-2 text-left  whitespace-normal tracking-normal prose-sm text-gray-300">
+                To facilitate Kenya most creative, innovative, transformative &amp;
+                sustainable solutions.
+            </p>
+        </div>
+
+    </div>
+  </div>
+
+
+  <section class="md:px-36 px-4 shadow-sm text-xs pb-4 ">
+    <h2 id="h1" class="text-xl md:text-3xl font-semibold dark:text-gray-50">Our Culture, Values, & Operating</h2>
+    <h2 id="h2" class="text-xl md:text-3xl font-semibold dark:text-gray-50">Principals</h2>
+    <div class="flex gap-4 mt-4">
+      <div class="md:h-9 md:w-9 h-6 w-6 rounded-lg bg-yellow-500"></div><p class="text-sm md:text-base">We believe that individuals with energy, working well together, under great leadership, in a conducive environment for thriving, will do remarkable and extraordinary things</p></div>
+
+    </div>
+     
+    <div class="grid md:grid-cols-2 gap-2 grid-cols-1 py-4">
+      <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue dark:text-slate-300">
+                Collaboration
+            </p>
+            <button @click="open = !open" class="p-4 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue text-sm" style="display: none;">
+            We acknowledge that our abilities and resources reflect a minimal segment of what is required to achieve our goals and that our impact is more significant when we work with others.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Innovation
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            We recognize that most hard-to-solve problems can be resolved only through innovative and creative solutions.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Market Attractiveness
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            We invest in areas and opportunities that will place us in a position of serving an underserved market.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Scalability
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            Our focus is on expansive opportunities that maximize our strengths.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Locally & Globally engaged
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            Our focus is aligned with the Vision 2030 & Sustainable Development Goals (SDGs).
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white  dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Expertise
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            Our expertise is acquired and built to streamline the implementation of our strategy.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Evidence-based and Result-focused
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            We ensure that the Foundation only invests in programs and activities that are based on evidence and achieve measurable results.
+        </div>
+    </div>
+    
+    <div x-data="{ open: false }" class=" bg-white dark:bg-slate-800 rounded-lg shadow-sm md:shadow-md shadow-charcoal-500/50 md:shadow-charcoal-500/50">
+        <div class="flex justify-between">
+            <p class="dark:text-slate-300 text-left p-4 rounded-lg font-bold text-xl leading-tight focus:outline-none focus:shadow-outline-blue">
+                Sustainability
+            </p>
+            <button @click="open = !open" class="p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="text-left p-4 rounded-lg focus:outline-none focus:shadow-outline-blue" style="display: none;">
+            Our support is centered on generating long-term sustainable results.
+        </div>
+    </div>
+    
+    </div>
+
+
+  </section>
+
+
+  <section  id="group" class="md:px-44 px-4 py-10 bg-white dark:bg-gray-900 overflow-hidden ">
+    <h2 class="text-center text-3xl font-bold dark:text-gray-50">Our Business Model </h2>
+    <p class="text-justify text-base my-6">Driven by our optimistic belief system, we seek to masterplan development of attractive enterprises in Kenya and beyond, as well as provide the commercial impetus for investors to establish cutting edge disruptive solutions. Our Business Model involves a solution development cycle consisting of 5 critical phases of value creation;</p>
+    <div class="overflow-hidden wrap  p-4 h-full">
+      <div class="md:border-2-2 md:absolute md:border-opacity-20 md:border-gray-700 md:h-full md:border" style="left: 50%"></div>
+      
+      <div class="mb-2 md:flex md:justify-between md:items-center  md:right-timeline">
+          <div class="order-1 w-5/12"></div>
+          <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+          </div>
+          <div class="order-1 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-sm  md:shadow-2xl  shadow-charcoal-500 md:shadow-charcoal-500  md:w-5/12    px-6 py-4">
+              <h3 class="mb-3 font-bold text-charcoal-500 text-xl dark:text-slate-300">Feasibility Business Phase</h3>
+              <p class=" text-sm leading-snug tracking-wide text-opacity-100">
+
+                  Understanding the opportunity in the market and the potential profit size of the
+                  venture(s)
+
+
+              </p>
+          </div>
+      </div>
+
+      <div class="mb-2 md:flex md:justify-between md:flex-row-reverse md:items-center  md:left-timeline">
+          <div class="order-1 w-5/12"></div>
+          <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+          </div>
+          <div class="order-1 dark:bg-gray-800 bg-gray-100 rounded-lg shadow-sm  md:shadow-2xl  shadow-charcoal-500 md:shadow-charcoal-500  md:w-5/12    px-6 py-4">
+              <h3 class="mb-3 font-bold text-charcoal-500 text-xl dark:text-slate-300">
+                  Concept Business Phase
+
+              </h3>
+              <p class="text-sm leading-snug tracking-wide  text-opacity-100">
+                  Outlining the product value proposition and solidify the business case, design, and
+                  develop all necessary approvals.
+              </p>
+          </div>
+      </div>
+
+      <div class="mb-2 md:flex md:justify-between items-center  right-timeline">
+          <div class="order-1 w-5/12"></div>
+          <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+          </div>
+          <div class="order-1 dark:bg-gray-800 bg-gray-100  rounded-lg shadow-sm  md:shadow-2xl  shadow-charcoal-500 md:shadow-charcoal-500  md:w-5/12    px-6 py-4">
+              <h3 class="mb-3 font-bold text-charcoal-500 text-xl dark:text-slate-300">
+                  Market Validation and Fundraising Phase
+
+              </h3>
+              <p class="text-sm leading-snug tracking-wide text-opacity-100">
+
+                  Reviewing the assumptions of the business case and analyzing the
+                  potential market uptake while sourcing the equity and
+                  capital funding needed.
+
+
+              </p>
+          </div>
+      </div>
+
+      
+      <div class="mb-2 md:flex justify-between flex-row-reverse items-center  left-timeline">
+          <div class="order-1 w-5/12"></div>
+          <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+          </div>
+          <div class="order-1 dark:bg-gray-800 bg-gray-100 rounded-lg shadow-sm  md:shadow-2xl  shadow-charcoal-500 md:shadow-charcoal-500  md:w-5/12    px-6 py-4">
+              <h3 class="mb-3 font-bold text-charcoal-500 text-xl dark:text-slate-300">
+                  Pre-development Phase
+
+              </h3>
+              <p class="text-sm leading-snug tracking-wide text-opacity-100">
+                  Sourcing all the essential
+                  resources and planning the cost of development,
+                  deliverables, milestones, and timelines.
+              </p>
+          </div>
+      </div>
+  
+      <div class="mb-2 md:flex justify-between items-center  right-timeline">
+          <div class="order-1 w-5/12"></div>
+          <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
+          </div>
+          <div class="order-1 dark:bg-gray-800 bg-gray-100  rounded-lg shadow-sm  md:shadow-2xl  shadow-charcoal-500 md:shadow-charcoal-500  md:w-5/12    px-6 py-4">
+              <h3 class="mb-3 font-bold text-charcoal-500 text-xl dark:text-slate-300">
+                  Full Blown Development Phase
+              </h3>
+              <p class="text-sm leading-snug tracking-wide text-opacity-100">
+
+                  Launching the previously-developed project plan into action, while
+                  continuously monitoring progress.
+
+
+              </p>
+          </div>
+      </div>
+    </div>
+
+  </section>
+  
+  <section class="bg-blue-950 md:px-40 px-10 p-4  text-gray-300 text-xs md:text-sm">
+     <h2 class="p-2 text-yellow-500 text-2xl font-bold ">Our critical value creation process involves;</h2>
+     <li class="py-2">Invent strategic business ideas</li>
+     <li class="py-2">Solution & Innovation Master Architecture (SIMA) creation</li>
+     <li class="py-2">Draw third-party capital injection at the pre-development life cycle level</li>
+     <li class="py-2">Develop solutions prototypes</li>
+     <li class="py-2">Avail prototypes to investors as per the Solution & Innovation Master Architecture (SIMA).</li>
+     <li class="py-2">Pursue management of full-blown developments.</li>
+     <li class="py-2">Invent strategic business ideas</li>
+
+  </section>
+
+   <section class="md:px-40 px-4">
+    <div>
+      <h2 id="h1" class="py-4 text-2xl text-yellow-600 font-bold text-center md:text-start">COMPANY PROFILE</h2>
+      <p class="text-sm md:text-base  text-wrap text-justify">Lifelong Group leverages the power of technology to create and innovate solutions necessary for the building and transforming of communities through socio-economic projects. As the name suggests, our goal is to drive lifelong impact for happy and prosperous lifelong societies. </p>
+      <button id="btn" class="bg-blue-950 text-white px-10 py-2 rounded-md mt-6 mx-auto">Continue Reading</button>
+    </div>
+   </section>
+
+           <!-- footer -->
+  <footer class="mt-12 md:px-40 px-2">
+    <div class=" md:flex justify-between align-middle text-center block" >
+      <img class="h-20 " src="imgs/logo.png" alt="">
+      <ul class="md:flex text-left md:text-center align-middle md:gap-8 gap-2  text-xs md:text-sm grid grid-cols-1 pb-7">
+        <li class="md:py-7">About Us</li>
+        <li class="md:py-7">Contact Us</li>
+        <li class="md:py-7">Careers</li>
+        <li class="md:py-7">Privacy Policy</li>
+      </ul>
+    </div>
+  
+
+  </footer>
+  <section class="md:px-40 px-2 pb-4 ">
+    <div class="flex justify-between text-xs md:text-sm border-t pt-8 border-gray-300">
+      <div class="gap-2 flex md:gap-4">
+        <img class="h-6 w-6" src="imgs/facebook-logo-icon-facebook-icon-png-images-icons-and-png-backgrounds-1.webp" alt="">
+        <img class="h-6 w-6" src="imgs/twitter.png" alt="">
+        <img class="h-6 w-6" src="imgs/images.jpeg" alt="">
+      </div>
+      <div x-data="{ currentYear: new Date().getFullYear() }">
+        <p>&copy; <span x-text="currentYear"></span> Lifelong group. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+      <!-- js -->
+    <script>
+            ScrollReveal().reveal('.group', { duration: 2000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('header', { duration: 2000, origin: 'top', distance: '50px' });
+            ScrollReveal().reveal('#group', { duration: 2000, origin: 'left', distance: '100px' });
+            ScrollReveal().reveal('.relative', { duration: 2000, origin: 'right', distance: '50px' });
+            ScrollReveal().reveal('#p', { duration: 2000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('#btn', { duration: 2000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('footer', { duration: 2000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('#us', { duration: 2000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('#id1', { duration: 1000, origin: 'right', distance: '50px' });
+            ScrollReveal().reveal('#id2', { duration: 1800, origin: 'right', distance: '50px' });
+            ScrollReveal().reveal('#model', { duration: 2000, origin: 'right', distance: '100px' });
+            ScrollReveal().reveal('#h1', { duration: 2200, origin: 'left', distance: '50px' });
+            ScrollReveal().reveal('#h2', { duration: 2200, origin: 'right', distance: '50px' });
+            ScrollReveal().reveal('#id3', { duration: 2200, origin: 'right', distance: '50px' });
+            ScrollReveal().reveal('#id3', { duration: 2200, origin: 'right', distance: '50px' });
+    
+           document.getElementById('menu-toggle').addEventListener('change', function () {
+           document.getElementById('overlay').classList.toggle('hidden', !this.checked);
+        });
+    </script>
+    
+      <script src="js/scrollreveal.min.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>
